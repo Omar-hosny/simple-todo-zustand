@@ -34,10 +34,6 @@ A modern, responsive Todo application built with React, TypeScript, and Vite. Th
 
 1. Clone the repository
 
-   ```bash
-   git clone https://github.com/yourusername/simple-todo.git
-   cd simple-todo
-   ```
 
 2. Install dependencies
 
