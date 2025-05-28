@@ -1,54 +1,96 @@
-# React + TypeScript + Vite
+# Simple Todo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive Todo application built with React, TypeScript, and Vite. This application allows users to manage their tasks with a clean and intuitive interface.
 
-Currently, two official plugins are available:
+![Simple Todo App](https://github.com/yourusername/simple-todo/raw/main/public/screenshot.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- ✅ Create, read, update, and delete tasks
+- 🔄 Mark tasks as complete/incomplete
+- 📝 Edit task descriptions
+- 💾 Persistent storage using local storage
+- 🎨 Clean, responsive UI with Tailwind CSS
+- ✨ Smooth animations with Framer Motion
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech Stack
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- **React 19** - A JavaScript library for building user interfaces
+- **TypeScript** - Adds static typing to JavaScript
+- **Vite** - Next generation frontend tooling
+- **Zustand** - A small, fast and scalable state-management solution
+- **Tailwind CSS** - A utility-first CSS framework
+- **Framer Motion** - A production-ready motion library for React
+- **Lucide React** - Beautiful & consistent icons
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+
+   ```bash
+   git clone https://github.com/yourusername/simple-todo.git
+   cd simple-todo
+   ```
+
+2. Install dependencies
+
+   ```bash
+   npm install
+   # or
+   yarn
+   ```
+
+3. Start the development server
+
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. Open your browser and navigate to `http://localhost:5173`
+
+## Build for Production
+
+```bash
+npm run build
+# or
+yarn build
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+The build artifacts will be stored in the `dist/` directory.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Project Structure
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
 ```
+simple-todo/
+├── public/            # Static assets
+├── src/
+│   ├── assets/        # Project assets
+│   ├── components/    # React components
+│   │   ├── TaskInput.tsx  # Component for adding new tasks
+│   │   ├── TaskItem.tsx   # Component for individual task items
+│   │   └── Tasks.tsx      # Component for displaying the task list
+│   ├── stores/        # State management
+│   │   └── useTodoStore.ts  # Zustand store for todo state
+│   ├── App.css        # App-specific styles
+│   ├── App.tsx        # Main App component
+│   ├── index.css      # Global styles
+│   └── main.tsx       # Entry point
+├── .gitignore         # Git ignore file
+├── index.html         # HTML template
+├── package.json       # Project dependencies and scripts
+├── tsconfig.json      # TypeScript configuration
+└── vite.config.ts     # Vite configuration
+```
+
+## License
+
+MIT
